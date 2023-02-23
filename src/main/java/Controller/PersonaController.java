@@ -23,7 +23,7 @@ import Interface.IPersonaService;
 @RequestMapping
 public class PersonaController {
     @Autowired IPersonaService iPersonaService;
-    @GetMapping("personas/traer")
+    @GetMapping("</personas/traer")
     public List<Persona> getPersona(){
         return iPersonaService.getPersona();
     }
