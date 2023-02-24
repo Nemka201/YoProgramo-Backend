@@ -33,5 +33,4 @@ public class ImpPersonaService implements IPersonaService{
         Persona persona = iPersonaRepository.findById(id).orElse(null);
         return persona;
     }
-    
 }
