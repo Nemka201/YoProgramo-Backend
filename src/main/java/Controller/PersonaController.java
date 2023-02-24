@@ -20,24 +20,24 @@ import Interface.IPersonaService;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping
+@RequestMapping("/Persona")
 public class PersonaController {
     @Autowired IPersonaService iPersonaService;
-    @GetMapping("</personas/traer")
+    @GetMapping("/traer")
     public List<Persona> getPersona(){
         return iPersonaService.getPersona();
     }
-    @PostMapping("/personas/crear")
+    @PostMapping("/crear")
     public String createPersona(@RequestBody Persona persona){
         iPersonaService.savePersona(persona);
         return "La persona fue creada correctamente";
     }
-    @DeleteMapping("/personas/borrar/{id}")
+    @DeleteMapping("/borrar/{id}")
     public String deletePersona(@PathVariable Long id){
         iPersonaService.deletePersona(id);
         return "La persona fue eliminada correctamente";
     }
-    @PutMapping("/personas/editar/{id}")
+    @PutMapping("/editar/{id}")
     public Persona editPersona(@PathVariable Long id,
                                                     @RequestParam("nombre") String nuevoNombre,
                                                     @RequestParam("apellido") String nuevoApellido,
@@ -49,7 +49,7 @@ public class PersonaController {
         iPersonaService.savePersona(persona);
         return persona; 
     }
-    @GetMapping("/personas/traer/perfil")
+    @GetMapping("/traer/perfil")
     public Persona traerPerfil(){
         return iPersonaService.findPersona((long)1);
     }
