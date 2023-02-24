@@ -18,11 +18,11 @@ public class Persona {
     private Long id;
 
     @NotBlank
-    @Size(min=3,max=30,message ="No cumple con la longitud")
+    @Size(min=1,max=30,message ="No cumple con la longitud")
     private String nombre;
 
     @NotBlank
-    @Size(min=3,max=30,message ="No cumple con la longitud")
+    @Size(min=1,max=30,message ="No cumple con la longitud")
     private String apellido;
 
     @Size(min=1,max=100,message ="No cumple con la longitud")
