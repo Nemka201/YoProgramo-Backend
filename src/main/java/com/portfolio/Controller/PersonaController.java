@@ -1,4 +1,4 @@
-package Controller;
+package com.portfolio.Controller;
 
 import java.util.List;
 
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import Entity.Persona;
-import Interface.IPersonaService;
+import com.portfolio.Entity.Persona;
+import com.portfolio.Interface.IPersonaService;
 
 
 @CrossOrigin(origins = "http://localhost:4200")
