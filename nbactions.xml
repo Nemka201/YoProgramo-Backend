@@ -52,4 +52,14 @@
                 <exec.appArgs></exec.appArgs>
             </properties>
         </action>
+        <action>
+            <actionName>CUSTOM-mvn clean install -U</actionName>
+            <displayName>mvn clean install -U</displayName>
+            <goals>
+                <goal>mvn</goal>
+                <goal>clean</goal>
+                <goal>install</goal>
+                <goal>-U</goal>
+            </goals>
+        </action>
     </actions>
