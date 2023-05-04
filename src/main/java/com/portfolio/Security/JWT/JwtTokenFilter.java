@@ -40,9 +40,7 @@ private final static Logger logger = LoggerFactory.getLogger(JwtProvider.class);
 		}
 
 		filterChain.doFilter(request, response);
-
 	}
-
 	private String getToken(HttpServletRequest request) {
 		String header = request.getHeader("Authorization");
 		if (header != null && header.startsWith("Bearer"))

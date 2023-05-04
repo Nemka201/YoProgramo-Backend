@@ -16,7 +16,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
 @Component
-public class JwtProvider {
+public class JwtProvider{
 
 	private final static Logger logger = LoggerFactory.getLogger(JwtProvider.class);
 

@@ -22,8 +22,9 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity(prePostEnabled = true)
-public class MainSecurity{
-	@Autowired
+public class MainSecurity {
+    
+        @Autowired
 	UserDetailsImplement userDetailsServiceImpl;
 
 	@Autowired
@@ -49,7 +50,7 @@ public class MainSecurity{
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.cors().and().csrf().disable().exceptionHandling().authenticationEntryPoint(jwtEntryPoint).and()
 				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-				.authorizeHttpRequests().requestMatchers("**").permitAll().anyRequest().authenticated();
+				.authorizeHttpRequests().requestMatchers("**","/auth","/auth/login","/login").permitAll().anyRequest().authenticated();
 
 		http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 
