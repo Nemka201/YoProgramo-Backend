@@ -36,7 +36,7 @@ public class ExperienciaController {
     
     @Autowired
     ExperienciaService sExperiencia;
-    
+    @PreAuthorize("")
     @GetMapping("/lista")
     public ResponseEntity<List<Experiencia>> list(){
         List<Experiencia> list = sExperiencia.list();
@@ -51,7 +51,7 @@ public class ExperienciaController {
         return new ResponseEntity(experiencia, HttpStatus.OK);
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id) {
         if (!sExperiencia.existsById(id)) {
@@ -61,7 +61,7 @@ public class ExperienciaController {
         return new ResponseEntity(new Mensaje("Experiencia eliminada"), HttpStatus.OK);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoExperiencia dtoexp){      
         if(StringUtils.isBlank(dtoexp.getNombreE())){
@@ -79,7 +79,7 @@ public class ExperienciaController {
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoExperiencia dtoexp){
         //Validamos si existe el ID

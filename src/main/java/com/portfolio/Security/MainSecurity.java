@@ -50,7 +50,11 @@ public class MainSecurity {
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http.cors().and().csrf().disable().exceptionHandling().authenticationEntryPoint(jwtEntryPoint).and()
 				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-				.authorizeHttpRequests().requestMatchers("**","/auth","/auth/login","/login").permitAll().anyRequest().authenticated();
+				.authorizeHttpRequests()
+                        .requestMatchers("","/auth","/auth/login","/login",
+                                "/experiencia/lista","/Persona/traer/perfil","/Persona/traer",
+                                "/Persona","/experiencia","/lista")
+                        .permitAll().anyRequest().authenticated();
 
 		http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 
