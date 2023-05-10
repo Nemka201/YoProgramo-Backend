@@ -13,7 +13,7 @@ import jakarta.validation.constraints.Size;
 public class Persona {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @NotBlank
     @Size(min=1,max=30,message ="No cumple con la longitud")
@@ -24,15 +24,15 @@ public class Persona {
     private String apellido;
 
     @Size(min=0,max=100,message ="No cumple con la longitud")
-    private String img;
+    private String imagen;
     
     // Getters & Setters
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -53,11 +53,11 @@ public class Persona {
     }
 
     public String getImg() {
-        return img;
+        return imagen;
     }
 
     public void setImg(String img) {
-        this.img = img;
+        this.imagen = img;
     }
     
     

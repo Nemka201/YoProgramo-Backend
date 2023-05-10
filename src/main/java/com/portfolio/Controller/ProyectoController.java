@@ -50,7 +50,7 @@ public class ProyectoController {
         return new ResponseEntity(proyecto, HttpStatus.OK);
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id) {
         if (!sProyecto.existsById(id)) {
@@ -60,7 +60,7 @@ public class ProyectoController {
         return new ResponseEntity(new Mensaje("Proyecto eliminado"), HttpStatus.OK);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoProyecto dtoproy){      
         if(StringUtils.isBlank(dtoproy.getNombreP())){
@@ -79,7 +79,7 @@ public class ProyectoController {
         return new ResponseEntity(new Mensaje("Proyecto agregado"), HttpStatus.OK);
     }
     
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoProyecto dtoproy){
         //Validamos si existe el ID

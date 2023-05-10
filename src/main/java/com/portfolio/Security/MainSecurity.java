@@ -53,7 +53,12 @@ public class MainSecurity {
 				.authorizeHttpRequests()
                         .requestMatchers("","/auth","/auth/login","/login",
                                 "/experiencia/lista","/Persona/traer/perfil","/Persona/traer",
-                                "/Persona","/experiencia","/lista")
+                                "/Persona","/experiencia","/lista","/experiencia/detai",
+                                "/educacion","/educacion/lista","/educacion/detail","/educacion/detail/",
+                                "/skill","/skill/lista","/skill/detail","/skill/detail/",
+                                "/proyecto","/proyecto/lista","/proyecto/detail","/proyecto/detail/",
+                                "/skills", "/skill/lista", "/skill/detail","/skill/detail/",
+                                "")
                         .permitAll().anyRequest().authenticated();
 
 		http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);

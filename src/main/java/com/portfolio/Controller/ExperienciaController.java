@@ -36,7 +36,6 @@ public class ExperienciaController {
     
     @Autowired
     ExperienciaService sExperiencia;
-    @PreAuthorize("")
     @GetMapping("/lista")
     public ResponseEntity<List<Experiencia>> list(){
         List<Experiencia> list = sExperiencia.list();
