@@ -18,7 +18,7 @@ import com.portfolio.Entity.Persona;
 import com.portfolio.Service.ImpPersonaService;
 
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200","https://porftfolio-nemka201.web.app"})
 @RestController
 @RequestMapping("/Persona")
 public class PersonaController {
