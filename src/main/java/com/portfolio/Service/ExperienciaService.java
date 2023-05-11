@@ -6,7 +6,7 @@ package com.portfolio.Service;
 
 import com.portfolio.Entity.Experiencia;
 import com.portfolio.Repository.ExperienciaRepository;
-import jakarta.transaction.Transactional;
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
