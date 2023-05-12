@@ -25,27 +25,27 @@ public class PersonaController {
         @Autowired
 	private ImpPersonaService interPersona;
 
-	@GetMapping("/personas/traer")
+	@GetMapping("/traer")
 	public List<Persona> getPersona() {
 		return interPersona.getPersona();
 	}
 
 	//@PreAuthorize("hasRole('ADMIN')")
-	@PostMapping("/personas/crear")
+	@PostMapping("/crear")
 	public String createStudent(@RequestBody Persona perso) {
 		interPersona.savePersona(perso);
 		return "La persona fue creada correctamente";
 	}
 
 	//@PreAuthorize("hasRole('ADMIN')")
-	@DeleteMapping("/personas/delete/{id}")
+	@DeleteMapping("/delete/{id}")
 	public String deletePersona(@PathVariable int id) {
 		interPersona.deletePersona(id);
 		return "La persona fue eliminada correctamente";
 	}
 
 	//@PreAuthorize("hasRole('ADMIN')")
-	@PutMapping("/personas/editar/{id}")
+	@PutMapping("/editar/{id}")
 	public Persona editPersona(@PathVariable int id, @RequestParam("nombre") String nuevoNombre,
 			@RequestParam("apellido") String nuevoApellido, @RequestParam("imagen") String nuevaImagen) {
 
@@ -60,7 +60,7 @@ public class PersonaController {
 		return perso;
 	}
 
-	@GetMapping("/personas/traer/perfil")
+	@GetMapping("/traer/perfil")
 	public Persona findPersona() {
 		return interPersona.findPersona((int) 1);
 	}

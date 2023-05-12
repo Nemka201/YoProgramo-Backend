@@ -5,7 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 import javax.persistence.Id;
 
 
@@ -18,14 +17,11 @@ public class Persona {
     private int id;
 
     @NotBlank
-    @Size(min=1,max=30,message ="No cumple con la longitud")
     private String nombre;
 
     @NotBlank
-    @Size(min=1,max=30,message ="No cumple con la longitud")
     private String apellido;
 
-    @Size(min=0,max=100,message ="No cumple con la longitud")
     private String imagen;
     
     // Getters & Setters
