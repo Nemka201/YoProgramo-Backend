@@ -4,8 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 
 
@@ -15,16 +15,28 @@ public class Persona {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    @NotBlank
-    private String nombre;
-
-    @NotBlank
-    private String apellido;
-
-    private String imagen;
     
-    // Getters & Setters
+    @NotNull
+    private String nombre;
+    
+    @NotNull
+    private String apellido;
+    
+    @NotNull
+    private String img;
+    
+    @NotNull
+    private String descripcion;  
+
+    public Persona() {
+    }
+
+    public Persona(String nombre, String apellido, String img, String descripcion) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.img = img;
+        this.descripcion = descripcion;
+    }
 
     public int getId() {
         return id;
@@ -51,10 +63,18 @@ public class Persona {
     }
 
     public String getImg() {
-        return imagen;
+        return img;
     }
 
     public void setImg(String img) {
-        this.imagen = img;
-    } 
+        this.img = img;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
 }
