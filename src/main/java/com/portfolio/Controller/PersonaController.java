@@ -1,6 +1,5 @@
 package com.portfolio.Controller;
 
-import com.portfolio.Dto.dtoPersona;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,11 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.portfolio.Entity.Persona;
-import com.portfolio.Security.Controller.Mensaje;
 import com.portfolio.Service.ImpPersonaService;
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @CrossOrigin(origins = {"http://localhost:4200","https://porftfolio-nemka201.web.app"})
@@ -50,26 +46,19 @@ public class PersonaController {
 
 	//@PreAuthorize("hasRole('ADMIN')")
 	@PutMapping("/editar/{id}")
-        public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoPersona dtopersona){
-        if(StringUtils.isBlank(dtopersona.getNombre())){
-            return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-        }
-        if(StringUtils.isBlank(dtopersona.getApellido())){
-            return new ResponseEntity(new Mensaje("El apellido es obligatorio"), HttpStatus.BAD_REQUEST);
-        }
-        if(StringUtils.isBlank(dtopersona.getImg())){
-            return new ResponseEntity(new Mensaje("La imagen es obligatoria"), HttpStatus.BAD_REQUEST);
-        }
-        
-        Persona persona = interPersona.findPersona(id);
-        
-        persona.setNombre(dtopersona.getNombre());
-        persona.setImg(dtopersona.getImg());
-        
-        
-        interPersona.savePersona(persona);
-        return new ResponseEntity(new Mensaje("Persona actualizada"), HttpStatus.OK);
-    } 
+	public Persona editPersona(@PathVariable int id, @RequestParam("nombre") String nuevoNombre,
+			@RequestParam("apellido") String nuevoApellido, @RequestParam("imagen") String nuevaImagen) {
+
+		Persona perso = interPersona.findPersona(id);
+
+		perso.setNombre(nuevoNombre);
+		perso.setApellido(nuevoApellido);
+		perso.setImg(nuevaImagen);
+
+		interPersona.savePersona(perso);
+
+		return perso;
+	} 
 	@GetMapping("/traer/perfil")
 	public Persona findPersona() {
 		return interPersona.findPersona((int) 1);
