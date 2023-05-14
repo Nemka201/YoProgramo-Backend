@@ -20,7 +20,6 @@ import com.portfolio.Service.ImpPersonaService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 
 
 @CrossOrigin(origins = {"http://localhost:4200","https://porftfolio-nemka201.web.app"})
@@ -35,21 +34,21 @@ public class PersonaController {
 		return interPersona.getPersona();
 	}
 
-	@PreAuthorize("hasRole('ADMIN')")
+	//@PreAuthorize("hasRole('ADMIN')")
 	@PostMapping("/crear")
 	public String createStudent(@RequestBody Persona perso) {
 		interPersona.savePersona(perso);
 		return "La persona fue creada correctamente";
 	}
 
-	@PreAuthorize("hasRole('ADMIN')")
+	//@PreAuthorize("hasRole('ADMIN')")
 	@DeleteMapping("/delete/{id}")
 	public String deletePersona(@PathVariable int id) {
 		interPersona.deletePersona(id);
 		return "La persona fue eliminada correctamente";
 	}
 
-	@PreAuthorize("hasRole('ADMIN')")
+	//@PreAuthorize("hasRole('ADMIN')")
 	@PutMapping("/editar/{id}")
         public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoPersona dtopersona){
         if(StringUtils.isBlank(dtopersona.getNombre())){
