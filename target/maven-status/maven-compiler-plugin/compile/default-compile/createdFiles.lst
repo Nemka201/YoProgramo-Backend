@@ -2,6 +2,7 @@ com\portfolio\Entity\Persona.class
 com\portfolio\Controller\EducacionController.class
 com\portfolio\Security\Controller\Mensaje.class
 com\portfolio\Service\ExperienciaService.class
+com\portfolio\Service\SPersona.class
 com\portfolio\Entity\Experiencia.class
 com\portfolio\Security\Dto\JwtDto.class
 com\portfolio\Security\JWT\JwtTokenFilter.class
@@ -26,9 +27,7 @@ com\portfolio\Controller\ExperienciaController.class
 com\portfolio\Dto\dtoPersona.class
 com\portfolio\Service\ProyectoService.class
 com\portfolio\Security\Dto\NuevoUsuario.class
-com\portfolio\Service\ImpPersonaService.class
 com\portfolio\PortfolioApplication.class
-com\portfolio\Service\IPersonaService.class
 com\portfolio\Repository\IPersonaRepository.class
 com\portfolio\Dto\dtoExperiencia.class
 com\portfolio\Security\Repository\IRolRepository.class

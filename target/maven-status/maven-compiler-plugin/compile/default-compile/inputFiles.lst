@@ -11,12 +11,12 @@ C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Bac
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Service\ProyectoService.java
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Service\HYSService.java
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Dto\dtoEducacion.java
-C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Service\ImpPersonaService.java
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Controller\ProyectoController.java
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Repository\IPersonaRepository.java
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Security\Services\RolService.java
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Entity\Experiencia.java
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Entity\Persona.java
+C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Service\SPersona.java
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Entity\HYS.java
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Security\Services\UsuarioService.java
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\PortfolioApplication.java
@@ -29,7 +29,6 @@ C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Bac
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Dto\dtoExperiencia.java
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Security\Services\UserDetailsImplement.java
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Entity\Proyecto.java
-C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Service\IPersonaService.java
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Service\EducacionService.java
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Security\Dto\NuevoUsuario.java
 C:\Users\muert\OneDrive\Documentos\Programacion\GitHub\YoProgramo\YoProgramo-Backend\src\main\java\com\portfolio\Security\MainSecurity.java
